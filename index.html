@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/portrait.png" />
     <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
 
@@ -24,7 +25,19 @@
     <meta property="og:url" content="https://umang3172.github.io/" />
     <meta property="profile:first_name" content="Umang" />
     <meta property="profile:last_name" content="Singh" />
-    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--
+      Preview image. The portrait is 640x640, so the card type is `summary`
+      (square) rather than `summary_large_image` (1.91:1) — declaring the wide
+      card without a wide image is what produced a blank preview everywhere
+      this link was pasted.
+    -->
+    <meta property="og:image" content="https://umang3172.github.io/portrait.png" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="Umang Singh" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://umang3172.github.io/portrait.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,31 +88,23 @@
     </script>
 
     <!--
-      ANALYTICS — Cloudflare Web Analytics.
-
-      Cookieless, collects no personal data, and therefore needs no consent
-      banner. It reports pageviews, referrers, paths, countries, devices and
-      Core Web Vitals. It does NOT report who visited, because nothing
+      Cloudflare Web Analytics. Cookieless, collects no personal data, and so
+      needs no consent banner. Reports pageviews, referrers, paths, countries,
+      devices and Core Web Vitals — never who visited, because nothing
       legitimate does.
 
-      To switch it on:
-        1. https://dash.cloudflare.com  ->  Analytics & Logs  ->  Web Analytics
-        2. Add a site:  umang3172.github.io
-        3. Copy the token it gives you into the line below
-        4. Uncomment that line, rebuild, redeploy
+      The token is public by design: it sits in page source and only identifies
+      which site a pageview belongs to. It grants no account access.
 
-      Left commented rather than shipped with a placeholder, so the live site
-      never makes a third-party request that does nothing.
+      Dashboard: dash.cloudflare.com -> Analytics & Logs -> Web Analytics
     -->
-    <!--
     <script
-      defer
+      type="module"
       src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "PASTE_YOUR_TOKEN_HERE"}'
+      data-cf-beacon='{"token": "6cdd7b9f3900493287152ae047d2429b"}'
     ></script>
-    -->
-    <script type="module" crossorigin src="/assets/index-DLSUiiMj.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CZQP-iH6.css">
+    <script type="module" crossorigin src="/assets/index-DsBu6PX-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-2PIkTOtE.css">
   </head>
   <body>
     <div id="root"></div>
